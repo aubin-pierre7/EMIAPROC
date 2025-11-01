@@ -143,6 +143,11 @@ body {
   gap: .75rem;
 }
 
+/* ✅ Affiche le menu mobile */
+.nav.nav-mobile {
+  display: block;
+}
+
 /* === HERO === */
 .hero {
   padding-top: 120px;
@@ -386,7 +391,6 @@ body {
     height: 180px;
   }
 }
-
 
 /* === ANIMATIONS === */
 @keyframes fadeIn {
