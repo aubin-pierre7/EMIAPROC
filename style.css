@@ -45,6 +45,13 @@ body {
   padding: 0 1.25rem;
 }
 
+@media (max-width: 768px) {
+  main {
+    padding-top: 64px; /* Hauteur de la barre sur mobile */
+  }
+}
+
+
 /* === HEADER / NAV === */
 .site-header {
   position: fixed;
