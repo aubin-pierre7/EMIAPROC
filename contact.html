@@ -1,84 +1,152 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — EMIAPROC</title>
-  <meta name="description" content="Contactez le club EMIAPROC — informations et formulaire." />
-  <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/Logo2.jpg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — EMIAPROC</title>
+    <meta
+      name="description"
+      content="Contactez le club EMIAPROC — informations et formulaire."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/Logo2.jpg" />
+  </head>
+  <body>
+    <header id="header" class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img id="logo-img" src="assets/Logo.jpg" alt="Logo EMIAPROC" />
+          <span class="brand-text">EMIAPROC</span>
+        </a>
 
-</head>
-<body>
-  <header id="header" class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img id="logo-img" src="assets/Logo.jpg" alt="Logo EMIAPROC" />
-        <span class="brand-text">EMIAPROC</span>
-      </a>
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
 
-      <button class="nav-toggle" aria-expanded="false" aria-label="Ouvrir le menu">
-        <span></span><span></span><span></span>
-      </button>
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="index.html">Accueil</a></li>
+            <li>
+              <a class="nav-link" href="rejoignez-nous.html">Rejoignez-nous</a>
+            </li>
+            <li><a class="nav-link" href="apropos.html">À propos</a></li>
+            <li><a class="nav-link" href="projets.html">Nos projets</a></li>
+            <li>
+              <a class="nav-link active" href="contact.html">Nous contacter</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-      <nav class="nav" id="mainNav">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="index.html">Accueil</a></li>
-          <li><a class="nav-link" href="rejoignez-nous.html">Rejoignez-nous</a></li>
-          <li><a class="nav-link" href="apropos.html">À propos</a></li>
-          <li><a class="nav-link" href="projets.html">Nos projets</a></li>
-          <li><a class="nav-link active" href="contact.html">Nous contacter</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <main>
+      <section class="section section-hero-light">
+        <div class="container">
+          <h1 class="section-title">Nous contacter</h1>
+          <p class="section-sub">
+            Envoyez-nous un message et nous vous répondrons rapidement.
+          </p>
 
-  <main>
-    <section class="section section-hero-light">
-      <div class="container">
-        <h1 class="section-title">Nous contacter</h1>
-        <p class="section-sub">Envoyez-nous un message et nous vous répondrons rapidement.</p>
+          <div class="contact-grid">
+            <div class="contact-info">
+              <h3>Informations</h3>
+              <p><strong>Email :</strong> EMIAPROC237@gmail.com</p>
+              <p><strong>Localisation :</strong> IUT de Douala</p>
+              <p><strong>Horaires :</strong> A venir ...</p>
+            </div>
 
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h3>Informations</h3>
-            <p><strong>Email :</strong> EMIAPROC237@gmail.com</p>
-            <p><strong>Localisation :</strong> IUT — MTIN</p>
-            <p><strong>Horaires :</strong> A venir ...</p>
+            <form id="contactForm" class="card form-card" novalidate>
+              <div class="form-group">
+                <label for="cname">Nom</label>
+                <input
+                  id="cname"
+                  name="cname"
+                  type="text"
+                  required
+                  placeholder="Nom complet"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="cemail">Numéro de téléphone</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  placeholder="+237 6 12 34 56 78"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="cmessage">Message</label>
+                <textarea
+                  id="cmessage"
+                  name="cmessage"
+                  rows="6"
+                  required
+                  placeholder="Votre message..."
+                ></textarea>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-primary btn-block"
+                onclick="sendContactToWhatsApp()"
+              >
+                Envoyer le message 
+              </button>
+              <p
+                class="muted success-msg"
+                id="contactSuccess"
+                aria-live="polite"
+                hidden
+              >
+                Merci ! Votre message a bien été envoyé.
+              </p>
+              <script>
+                function sendContactToWhatsApp() {
+                  const name = document.getElementById("cname").value;
+                  const phone = document.getElementById("phone").value;
+                  const message = document.getElementById("cmessage").value;
+
+                  if (!name || !phone || !message) {
+                    alert("Veuillez remplir tous les champs.");
+                    return;
+                  }
+
+                  const text =
+                    `*Message de contact EMIAPROC*%0A%0A` +
+                    `👤 Nom : ${name}%0A` +
+                    `📞 Téléphone : ${phone}%0A%0A` +
+                    `💬 Message : ${message}`;
+
+                  const whatsappNumber = "237XXXXXXXXX"; // 🔴 remplace par TON numéro WhatsApp
+                  const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+                  window.open(url, "_blank");
+                }
+              </script>
+            </form>
           </div>
+        </div>
+      </section>
+    </main>
 
-          <form id="contactForm" class="card form-card" novalidate>
-            <div class="form-group">
-              <label for="cname">Nom</label>
-              <input id="cname" name="cname" type="text" required placeholder="Nom complet" />
-            </div>
-
-            <div class="form-group">
-              <label for="cemail">Email</label>
-              <input id="cemail" name="cemail" type="email" required placeholder="votre@mail.com" />
-            </div>
-
-            <div class="form-group">
-              <label for="cmessage">Message</label>
-              <textarea id="cmessage" name="cmessage" rows="6" required placeholder="Votre message..."></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
-            <p class="muted success-msg" id="contactSuccess" aria-live="polite" hidden>Merci ! Votre message a bien été envoyé.</p>
-          </form>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p>
+            &copy; <span id="year-5"></span> EMIAPROC |Tous droits réservés.
+          </p>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <p>&copy; <span id="year-5"></span> EMIAPROC |Tous droits réservés.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
