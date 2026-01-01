@@ -155,9 +155,14 @@
                 ></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-block">
-                Envoyer ma candidature
+              <button
+                type="button"
+                class="btn btn-primary btn-block"
+                onclick="sendToWhatsApp()"
+              >
+                Envoyer ma candidature via WhatsApp
               </button>
+
               <p
                 class="muted success-msg"
                 id="joinSuccess"
@@ -166,6 +171,41 @@
               >
                 Merci ! Votre candidature a bien été enregistrée.
               </p>
+              <script>
+                function sendToWhatsApp() {
+                  const name = document.getElementById("fullName").value;
+                  const phone = document.getElementById("phone").value;
+                  const year = document.getElementById("year").value;
+                  const message = document.getElementById("message").value;
+
+                  const ateliers = [];
+                  document
+                    .querySelectorAll('input[name="atelier[]"]:checked')
+                    .forEach((el) => {
+                      ateliers.push(el.value);
+                    });
+
+                  if (!name || !phone || !message || ateliers.length === 0) {
+                    alert(
+                      "Veuillez remplir tous les champs obligatoires et choisir au moins un atelier."
+                    );
+                    return;
+                  }
+
+                  const text =
+                    `*Nouvelle candidature EMIAPROC*%0A%0A` +
+                    `👤 Nom : ${name}%0A` +
+                    `📞 Téléphone : ${phone}%0A` +
+                    `🎓 Année/Filière : ${year}%0A` +
+                    `🛠️ Atelier(s) : ${ateliers.join(", ")}%0A%0A` +
+                    `💬 Message : ${message}`;
+
+                  const whatsappNumber = "237696865577"; // <-- TON NUMÉRO ICI (sans + ni espaces)
+                  const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+                  window.open(url, "_blank");
+                }
+              </script>
             </form>
           </div>
         </div>
