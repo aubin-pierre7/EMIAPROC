@@ -1,167 +1,220 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>À propos — EMIAPROC</title>
-  <meta name="description" content="À propos du club EMIAPROC — équipe, mission et réalisations." />
-  <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/Logo2.jpg">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>À propos — EMIAPROC</title>
+    <meta
+      name="description"
+      content="À propos du club EMIAPROC — équipe, mission et réalisations."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="assets/Logo2.jpg" />
+  </head>
+  <body>
+    <header id="header" class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">
+          <img id="logo-img" src="assets/Logo2.jpg" alt="Logo EMIAPROC" />
+          <span class="brand-text">EMIAPROC</span>
+        </a>
 
-</head>
-<body>
-  <header id="header" class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img id="logo-img" src="assets/Logo2.jpg" alt="Logo EMIAPROC" />
-        <span class="brand-text">EMIAPROC</span>
-      </a>
+        <button
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
 
-      <button class="nav-toggle" aria-expanded="false" aria-label="Ouvrir le menu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav" id="mainNav">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="index.html">Accueil</a></li>
-          <li><a class="nav-link" href="rejoignez-nous.html">Rejoignez-nous</a></li>
-          <li><a class="nav-link active" href="apropos.html">À propos</a></li>
-          <li><a class="nav-link" href="projets.html">Nos projets</a></li>
-          <li><a class="nav-link" href="contact.html">Nous contacter</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="section section-intro-dark">
-      <div class="container">
-        <h1>Notre mission</h1>
-        <p class="lead">Cultiver l'esprit d'innovation, la pratique et l'entraide. Nous accompagnons les étudiants dans la conception, le prototypage et le déploiement de systèmes robotiques.</p>
+        <nav class="nav" id="mainNav">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="index.html">Accueil</a></li>
+            <li>
+              <a class="nav-link" href="rejoignez-nous.html">Rejoignez-nous</a>
+            </li>
+            <li><a class="nav-link active" href="apropos.html">À propos</a></li>
+            <li><a class="nav-link" href="projets.html">Nos projets</a></li>
+            <li><a class="nav-link" href="contact.html">Nous contacter</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- Team -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Notre équipe dévouée</h2>
-        <p class="section-sub">Une équipe pluridisciplinaire - électronique, mécanique, logiciel et design.</p>
+    <main>
+      <section class="section section-intro-dark">
+        <div class="container">
+          <h1>Notre mission</h1>
+          <p class="lead">
+            Cultiver l'esprit d'innovation, la pratique et l'entraide. Nous
+            accompagnons les étudiants dans la conception, le prototypage et le
+            déploiement de systèmes robotiques.
+          </p>
+        </div>
+      </section>
 
-        <div class="team-grid">
+      <!-- Team -->
+      <section class="section">
+        <div class="container">
+          <h2 class="section-title">Notre équipe dévouée</h2>
+          <p class="section-sub">
+            Une équipe pluridisciplinaire - électronique, mécanique, logiciel et
+            design.
+          </p>
 
-  <div class="team-card">
-    <h4>Atelier Modélisation 3D</h4>
-    <p class="muted">
-      Les responsables de cet atelier maîtrisent la conception 3D de bout en bout :
-      modélisation précise, optimisation des pièces, contraintes mécaniques réelles
-      et préparation à l’impression ou à l’usinage. Leur approche transforme les idées
-      abstraites en prototypes concrets, fonctionnels et industrialisables.
-    </p>
-  </div>
-
-  <div class="team-card">
-    <h4>Atelier Électronique</h4>
-    <p class="muted">
-      Porté par des responsables rigoureux et méthodiques, l’atelier électronique
-      conçoit des systèmes fiables et robustes. De l’alimentation aux capteurs,
-      en passant par les microcontrôleurs, chaque circuit est pensé pour la stabilité,
-      la sécurité et la performance sur le terrain.
-    </p>
-  </div>
-
-  <div class="team-card">
-    <h4>Atelier Interface Homme-Machine</h4>
-    <p class="muted">
-      Cet atelier est guidé par des responsables sensibles à l’expérience utilisateur
-      et à l’ergonomie. Leur objectif est clair : concevoir des interfaces intuitives,
-      esthétiques et accessibles, capables de faire le lien entre la complexité
-      technique des systèmes et l’humain qui les utilise.
-    </p>
-  </div>
-
-  <div class="team-card">
-    <h4>Atelier Programmation</h4>
-    <p class="muted">
-      Les responsables de l’atelier programmation excellent dans l’écriture de
-      logiciels propres, structurés et évolutifs. Qu’il s’agisse d’embarqué,
-      d’applications ou de logique algorithmique, ils privilégient la performance,
-      la maintenabilité et la résolution efficace de problèmes complexes.
-    </p>
-  </div>
-
-</div>
-
-      </div>
-    </section>
-
-    <!-- Réalisations -->
-    <section id="realisations" class="section section-projects">
-      <div class="container">
-        <h2 class="section-title">Découvrez nos réalisations</h2>
-        <p class="section-sub">Projets développés par EMIAPROC, du prototypage au déploiement.</p>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <img src="assets/Drone.jpg" alt="Robot autonome — réalisation" />
-            <div class="project-body">
-              <h4>Drone programmable</h4>
-              <p>Drone multi-rotor adapté à la recherche aérienne et à la capture vidéo stabilisée.</p>
+          <div class="team-grid">
+            <div class="team-card">
+              <h4>Atelier Modélisation 3D</h4>
+              <p class="muted">
+                Les responsables de cet atelier maîtrisent la conception 3D de
+                bout en bout : modélisation précise, optimisation des pièces,
+                contraintes mécaniques réelles et préparation à l’impression ou
+                à l’usinage. Leur approche transforme les idées abstraites en
+                prototypes concrets, fonctionnels et industrialisables.
+              </p>
             </div>
-          </article>
 
-          <article class="project-card">
-            <img src="assets/Ami_Brondon.jpg" alt="Système domotique — réalisation" />
-            <div class="project-body">
-              <h4>Message déroulant avec écrans P10</h4>
-              <p>Affichage LED connecté permettant de diffuser des messages dynamiques et personnalisés sur des écrans P10.</p>
+            <div class="team-card">
+              <h4>Atelier Électronique</h4>
+              <p class="muted">
+                Porté par des responsables rigoureux et méthodiques, l’atelier
+                électronique conçoit des systèmes fiables et robustes. De
+                l’alimentation aux capteurs, en passant par les
+                microcontrôleurs, chaque circuit est pensé pour la stabilité, la
+                sécurité et la performance sur le terrain.
+              </p>
             </div>
-          </article>
 
-          <article class="project-card">
-            <img src="assets/Mini_Voiture.jpg" alt="Drone programmable — réalisation" />
-            <div class="project-body">
-              <h4>Voiture télécommandée intelligente</h4>
-              <p>Prototype de véhicule miniature contrôlé à distance via télécommande sans fil.</p>
+            <div class="team-card">
+              <h4>Atelier Interface Homme-Machine</h4>
+              <p class="muted">
+                Cet atelier est guidé par des responsables sensibles à
+                l’expérience utilisateur et à l’ergonomie. Leur objectif est
+                clair : concevoir des interfaces intuitives, esthétiques et
+                accessibles, capables de faire le lien entre la complexité
+                technique des systèmes et l’humain qui les utilise.
+              </p>
             </div>
-          </article>
 
-          <article class="project-card">
-            <img src="assets/Photo_caisse.jpg" alt="Bras robotisé — réalisation" />
-            <div class="project-body">
-              <h4>Drone transporteur de plantes</h4>
-              <p>Conception d’un modèle 3D de drone capable de transporter et déposer des plantes de manière autonome, alliant technologie aérienne et respect de l’environnement.</p>
+            <div class="team-card">
+              <h4>Atelier Programmation</h4>
+              <p class="muted">
+                Les responsables de l’atelier programmation excellent dans
+                l’écriture de logiciels propres, structurés et évolutifs. Qu’il
+                s’agisse d’embarqué, d’applications ou de logique algorithmique,
+                ils privilégient la performance, la maintenabilité et la
+                résolution efficace de problèmes complexes.
+              </p>
             </div>
-          </article>
+          </div>
+        </div>
+      </section>
 
-          <article class="project-card">
-            <img src="assets/Application.jpg" alt="Plateforme IoT — réalisation" />
-            <div class="project-body">
-              <h4>Application de contrôle des robots</h4>
-              <p>Développement d’une application mobile intuitive permettant de piloter et superviser nos robots en temps réel.</p>
-            </div>
-          </article>
+      <!-- Réalisations -->
+      <section id="realisations" class="section section-projects">
+        <div class="container">
+          <h2 class="section-title">Découvrez nos réalisations</h2>
+          <p class="section-sub">
+            Projets développés par EMIAPROC, du prototypage au déploiement.
+          </p>
 
-          <article class="project-card">
-            <img src="assets/Bras.jpg" alt="Rover tout-terrain — réalisation" />
-            <div class="project-body">
-              <h4>Bras robotisé</h4>
-              <p>Système de manipulation pour tâches répétitives avec contrôle PID et rétroaction capteurs.</p>
-            </div>
-          </article>
+          <div class="projects-grid">
+            <article class="project-card">
+              <img src="assets/Drone.jpg" alt="Robot autonome — réalisation" />
+              <div class="project-body">
+                <h4>Drone programmable</h4>
+                <p>
+                  Drone multi-rotor adapté à la recherche aérienne et à la
+                  capture vidéo stabilisée.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="assets/Ami_Brondon.jpg"
+                alt="Système domotique — réalisation"
+              />
+              <div class="project-body">
+                <h4>Message déroulant avec écrans P10</h4>
+                <p>
+                  Affichage LED connecté permettant de diffuser des messages
+                  dynamiques et personnalisés sur des écrans P10.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="assets/Mini_Voiture.jpg"
+                alt="Drone programmable — réalisation"
+              />
+              <div class="project-body">
+                <h4>Voiture télécommandée intelligente</h4>
+                <p>
+                  Prototype de véhicule miniature contrôlé à distance via
+                  télécommande sans fil.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="assets/Photo_caisse.jpg"
+                alt="Bras robotisé — réalisation"
+              />
+              <div class="project-body">
+                <h4>Drone transporteur de plantes</h4>
+                <p>
+                  Conception d’un modèle 3D de drone capable de transporter et
+                  déposer des plantes de manière autonome, alliant technologie
+                  aérienne et respect de l’environnement.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="assets/Application.jpg"
+                alt="Plateforme IoT — réalisation"
+              />
+              <div class="project-body">
+                <h4>Application de contrôle des robots</h4>
+                <p>
+                  Développement d’une application mobile intuitive permettant de
+                  piloter et superviser nos robots en temps réel.
+                </p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img
+                src="assets/Bras.jpg"
+                alt="Rover tout-terrain — réalisation"
+              />
+              <div class="project-body">
+                <h4>Bras robotisé</h4>
+                <p>
+                  Système de manipulation pour tâches répétitives avec contrôle
+                  PID et rétroaction capteurs.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <p>
+            &copy; <span id="year-3"></span> EMIAPROC | Tous droits réservés.
+          </p>
         </div>
       </div>
-    </section>
+    </footer>
 
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <p>&copy; <span id="year-3"></span> EMIAPROC | Tous droits réservés.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
